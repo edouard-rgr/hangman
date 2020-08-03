@@ -45,7 +45,7 @@ During your in person interview, we’ll do a live code review where we’ll go 
 We want to see how well you can understand an existing codebase and make a meaningful change to it.
 
 ## How should you submit your solution?
-1. Clone this repository to your Github account and keep it private.
+1. Fork this repository to your Github account and keep it private.
 2. Once you're done share your repository with us.
 
 ## What does this repository include?
