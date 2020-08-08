@@ -33,6 +33,7 @@ class HangmanGame:
         self.num_failed_guesses_remaining = failed_guesses_limit
         self.revealed_word = ''.join(['_' for i in range(len(word))])
         self.num_revealed_letters = 0
+        self.used_undo = 0
 
     def guess(self, input_letter):
         letter = input_letter.lower()
@@ -98,19 +99,25 @@ def create_hangman_game(words=None, guess_limit=5):
 
 def undo():
 
-    if is_letter_in_word == False:
-        self.num_failed_guesses_remaining += 1
-    else:
-        for i in range(len(self.word)):
-            last_letter = self.word[i]
-            
-            if self.guesses[-1] = last_letter
-                self.num_revealed_letters -= 1
-                self.revealed_word.remove(last_letter)
-                self.revealed_word = self.revealed_word[:i] + '_' + self.revealed_word[i + 1:]
+    if self.used_undo = 0:
 
-    points = points/2
-    self.guesses.pop()
+        if is_letter_in_word == False:
+            self.num_failed_guesses_remaining += 1
+        else:
+            for i in range(len(self.word)):
+                last_letter = self.word[i]
+                
+                if self.guesses[-1] = last_letter
+                    self.num_revealed_letters -= 1
+                    self.revealed_word.remove(last_letter)
+                    self.revealed_word = self.revealed_word[:i] + '_' + self.revealed_word[i + 1:]
+
+        points = points/2
+        self.guesses.pop()
+        self.used_undo += 1
+
+    else:
+        print("You can no longer use the undo feature")
 
 
 
