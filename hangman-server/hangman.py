@@ -94,3 +94,23 @@ def create_hangman_game(words=None, guess_limit=5):
 
     rand_word = words[random.randint(0, len(words)-1)]
     return HangmanGame(rand_word, guess_limit)
+
+
+def undo():
+
+    if is_letter_in_word == False:
+        self.num_failed_guesses_remaining += 1
+    else:
+        for i in range(len(self.word)):
+            last_letter = self.word[i]
+            
+            if self.guesses[-1] = last_letter
+                self.num_revealed_letters -= 1
+                self.revealed_word.remove(last_letter)
+                self.revealed_word = self.revealed_word[:i] + '_' + self.revealed_word[i + 1:]
+
+    points = points/2
+    self.guesses.pop()
+
+
+

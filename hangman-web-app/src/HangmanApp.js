@@ -66,6 +66,9 @@ function HangmanApp() {
         <div className="HangmanApp">
             <h1>Hangman</h1>
             {view}
+
+            <button class="btn" name="undo_btn" type ="submit" value="UNDO" onclick="undo()">UNDO</button>
+
         </div>
     );
 }
